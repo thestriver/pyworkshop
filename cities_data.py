@@ -8,7 +8,7 @@ def list_cities():
             print(f"The largest cities in the U.S are:")
             for index , city in enumerate(cities_data):
                 print(f"{index + 1}. {city['name']} : {city['pop']}")
-
+        # or run this when you fall into an error
         except json.decoder.JSONDecodeError as error:
             print(f"Sorry there was an error decoding that file:")
             print(f"\t {error}")

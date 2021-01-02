@@ -19,7 +19,7 @@ def github_repo_search(languages, sort="stars", order="desc"):
 
     response = requests.get(api_url, params=params)
     status_code = response.status_code
-
+    #using the status code eventualities
     if status_code == 403:
         raise RuntimeError("Rate limit reached. Please wait a minute and try again.")
     if status_code != 200:
